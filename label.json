@@ -1,0 +1,22 @@
+
+{	"Not tagged": -1,
+	"Walking": 0,
+	"Running": 1,
+	"Commute in bus": 2,
+	"Eating using fork and spoon": 3,
+	"Using mobile phone/texting": 4,
+	"Working on laptop": 5,
+	"Sitting": 6,
+	"Washing hands": 7,
+	"Eating with hand": 8,
+    "Conversing while sitting": 9,
+	"Elevator": 10,
+	"Opening door": 11,
+	"Standing": 12,
+	"Climbing upstairs": 13,
+	"Jogging": 14,
+	"Video chat while sitting": 15,
+	"Sleeping": 16,
+	"Walking with hand in pocket": 17,
+	"Writing": 18
+}
