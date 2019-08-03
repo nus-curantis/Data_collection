@@ -1,8 +1,10 @@
-# Step 1: Using the device CC2650
+# Step 1: Record data
+
+### Using device
 
 << In person demo >>
 
-# Step 2: Log the activities
+### Logging data
 
  1. aTimeLogger - Time Tracker - This app is helpful for activity tracker, custom made activity icons make it easy to use. Make sure to include all the activities in the same way written in Github to the app before starting (including case and space). In order to add these activities : Go to the fourth section in the app denoted by list logo → Click on the add button found in the bottom right corner → Enter the activity names exactly in the way in GitHub → Press the tick.
 
@@ -12,7 +14,7 @@ Note: Minor activities like opening the door, pressing the button on the elevato
 
 
 
-# Step 3: Label the activities
+# Step 2: Label the activities
 
 1. Raw data is exported in the form of csv file named with the start time and date is exported from BLE Sensor tag app and activity log is exported from alogger app.
 
