@@ -8,10 +8,13 @@
 
  1. aTimeLogger - Time Tracker - This app is helpful for activity tracker, custom made activity icons make it easy to use. Make sure to include all the activities in the same way written in Github to the app before starting (including case and space). In order to add these activities : Go to the fourth section in the app denoted by list logo → Click on the add button found in the bottom right corner → Enter the activity names exactly in the way in GitHub → Press the tick.
 
-2. When starting to record click on the current activity icon and pause/stop the previous activities. After the data collection, a report can be created of the log in csv format. ( Go to last section in the app denoted by three dots → reports → Create report (Choose the correct date) → Export option on top right → CSV
+2. When starting to record click on the current activity icon and stop the previous activity. Always log start and end of a activity
 
-Note: Minor activities like opening the door, pressing the button on the elevator etc need not be logged. Please take a look at the activities in the GitHub readme for a better picture of the kind of activities.
+3. Miscellaneous activities like pressing the button on the elevator, taking out the wallet to pay can be logged under the label (-1 = Not tagged).Please take a look at the activities in the GitHub readme for a better picture of the kind of activities.
 
+4. Try to log activites for entire duration of recording, if some time duration was missed it will not be assigned any label.
+
+5. After the data collection, a report can be created of the log in csv format. ( Go to last section in the app denoted by three dots → reports → Create report (Choose the correct date) → Export option on top right → CSV
 
 
 # Step 2: Label the activities
