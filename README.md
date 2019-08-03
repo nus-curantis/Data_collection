@@ -1,8 +1,8 @@
-# How to use the device
+# Step 1: Using the device CC2650
 
 << In person demo >>
 
-# How to log the activities
+# Step 2: Log the activities
 
  1. aTimeLogger - Time Tracker - This app is helpful for activity tracker, custom made activity icons make it easy to use. Make sure to include all the activities in the same way written in Github to the app before starting (including case and space). In order to add these activities : Go to the fourth section in the app denoted by list logo → Click on the add button found in the bottom right corner → Enter the activity names exactly in the way in GitHub → Press the tick.
 
@@ -12,9 +12,10 @@ Note: Minor activities like opening the door, pressing the button on the elevato
 
 
 
-# How to label the activities
+# Step 3: Label the activities
 
-1. Raw data is exported in the form of csv file named with the start time and date is exported from BLE Sensor tag app
+1. Raw data is exported in the form of csv file named with the start time and date is exported from BLE Sensor tag app and activity log is exported from alogger app.
+
 2. Run data_label.py as below:
 ```
 python data_label.py -r <raw_data_path> -l <alogger_path> -id <user_id>
@@ -34,15 +35,15 @@ optional arguments:
 
 ```
 
-3. A new csv file will be created with timestamp and labels
+3. The labelled csv file will be created with timestamp and labels
 
 Note:
 
-1. New activities needs to be updated in GitHub readme.
+1. New activities needs to be updated in GitHub readme and in label.json
 2. Inform if there is an error message from running the data_label.py file.
 
 
-# Dealing with the files
+### Dealing with the files
 
-1. Upload the generated csv file with labels to Dataset repo, in the correct User<id> folder
+1. Upload the generated csv file with labels to Dataset repo, in the correct Userid folder
 2. Pass the alogger and raw data file to us
