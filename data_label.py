@@ -11,7 +11,6 @@ from operator import itemgetter
 from itertools import *
 import argparse
 import json
-
 sns.set()
 
 
@@ -49,7 +48,7 @@ def change_labels(data, start, end, label):
     return data
 
 
-def timestamp(path, store=False, user_num=3):
+def timestamp(path, store=False, user_num=3, sampling_debug=False):
 
     data = pd.read_csv(path, header=0)
 
@@ -95,12 +94,13 @@ def timestamp(path, store=False, user_num=3):
               np.mean(list(counter.values())))
 
     plt.show()
-
-    plt.figure()
-    plt.plot(list(counter.keys()), list(counter.values()), 'r')
-    plt.xlabel("Time (sec)")
-    plt.ylabel("Sampling rate (Hz)")
-    plt.title("Sampling rate vs time")
+    if sampling_debug:
+        plt.figure()
+        plt.plot(list(counter.keys()), list(counter.values()), 'r')
+        plt.xlabel("Time (sec)")
+        plt.ylabel("Sampling rate (Hz)")
+        plt.title("Sampling rate vs time")
+        plt.show()
 
     fname = path.split("/")[-1]
     date = fname.split("_")[0].split("-")
@@ -135,18 +135,29 @@ def alogger(path, label_dict):
 
     label = [label_dict.get(i) for i in df["Activity type"]]
 
-    return start, end, label
+    return start, end, label, df["Activity type"]
 
 
 def data_labelling(data, alogger_path, label_dict, fname, user_num, store):
 
-    start, end, label = alogger(alogger_path, label_dict)
+    start, end, label, label_str = alogger(alogger_path, label_dict)
 
     for i, val in enumerate(start):
 
         start_time = datetime.datetime.strptime(val, "%Y-%m-%d %H:%M:%S")
         end_time = datetime.datetime.strptime(end[i], "%Y-%m-%d %H:%M:%S")
         data = change_labels(data, start_time, end_time, label[i])
+
+    plt.figure()
+    for i, val in enumerate(start):
+        plt.plot(val, label[i], 'r*')
+        plt.plot(end[i], label[i], 'g*')
+        plt.ylabel("Label")
+        plt.xlabel("Start time of the activity")
+        plt.title("Check if the labels are correct and in order \n " +
+                  '-->'.join(label_str))
+    plt.legend()
+    plt.show()
 
     if store:
         data.to_csv(str(user_num) + "_" + fname, index=False)
@@ -177,7 +188,7 @@ if __name__ == '__main__':
     user_num = args.id
 
     fname = raw_data_path.split("/")[-1]
-    data = timestamp(raw_data_path)
+    data = timestamp(raw_data_path, sampling_debug=False)
 
     with open('./label.json') as f:
         label_dict = json.load(f)
