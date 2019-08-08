@@ -51,4 +51,4 @@ Note:
 ### Dealing with the files
 
 1. Upload the generated csv file with labels to Dataset repo, in the correct Userid folder
-2. Pass the alogger and raw data file to us by uploading it in this [drive link](https://drive.google.com/drive/folders/1-jDS2mnpNgkqdmQWidLu5yM5mTSrWbfa) in your corresponding user folder.
+2. Pass the alogger and raw data file to us by uploading it in this [drive link](https://drive.google.com/drive/folders/1-jDS2mnpNgkqdmQWidLu5yM5mTSrWbfa?usp=sharing) in your corresponding user folder.
