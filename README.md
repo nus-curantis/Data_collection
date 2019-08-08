@@ -8,7 +8,7 @@
 
  1. aTimeLogger - Time Tracker - This app is helpful for activity tracker, custom made activity icons make it easy to use. Make sure to include all the activities in the same way written in Github to the app before starting (including case and space). In order to add these activities : Go to the fourth section in the app denoted by list logo → Click on the add button found in the bottom right corner → Enter the activity names exactly in the way in GitHub → Press the tick.
 
-2. When starting to record click on the current activity icon and stop the previous activity. Always log start and end of a activity
+2. When starting to record click on the current activity icon and stop the previous activity. Always log start and end of a activity.
 
 3. Miscellaneous activities like pressing the button on the elevator, taking out the wallet to pay can be logged under the label (-1 = Not tagged).Please take a look at the activities in the GitHub readme for a better picture of the kind of activities.
 
@@ -51,4 +51,4 @@ Note:
 ### Dealing with the files
 
 1. Upload the generated csv file with labels to Dataset repo, in the correct Userid folder
-2. Pass the alogger and raw data file to us
+2. Pass the alogger and raw data file to us by uploading it in this [drive link](https://drive.google.com/drive/folders/1-jDS2mnpNgkqdmQWidLu5yM5mTSrWbfa) in your corresponding user folder.
