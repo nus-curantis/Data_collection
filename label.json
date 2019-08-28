@@ -1,5 +1,7 @@
 
-{	"Not tagged": -1,
+{
+	"Uncertain":-2,
+	"Not tagged": -1,
 	"Walking": 0,
 	"Running": 1,
 	"Commute in bus": 2,
@@ -18,5 +20,8 @@
 	"Video chat while sitting": 15,
 	"Sleeping": 16,
 	"Walking with hand in pocket": 17,
-	"Writing": 18
+	"Writing": 18,
+	"Standing while commute in train": 19,
+	"Climbing downstairs": 20,
+	"Drinking":21
 }

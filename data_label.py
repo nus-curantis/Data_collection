@@ -122,13 +122,14 @@ def timestamp(path, store=False, user_num=3, sampling_debug=False):
 def alogger(path, label_dict):
 
     df = pd.read_csv(path, header=0)
-
     row_NaN = df[df["From"] == "%"].index.tolist()[0]
-
     df = df.loc[0:row_NaN - 1]
-
+    # print(df["Activity type"].tolist())
     start = df["From"]
     end = df["To"]
+    for i in df["Activity type"]:
+        if i not in label_dict.keys():
+            print(i)
 
     assert (all([i in label_dict.keys()
                  for i in df["Activity type"]])), "Unknown label found, add the new activity in label.json"
@@ -158,7 +159,10 @@ def data_labelling(data, alogger_path, label_dict, fname, user_num, store):
                   '-->'.join(label_str))
     plt.legend()
     plt.show()
-
+    data = data.copy()
+    data = data.iloc[data["Label"].first_valid_index():data[
+        "Label"].last_valid_index()]
+    data["Label"].fillna(-2, inplace=True)
     if store:
         data.to_csv(str(user_num) + "_" + fname, index=False)
 

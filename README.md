@@ -12,7 +12,7 @@
 
 3. Miscellaneous activities like pressing the button on the elevator, taking out the wallet to pay can be logged under the label (-1 = Not tagged).Please take a look at the activities in the GitHub readme for a better picture of the kind of activities.
 
-4. Try to log activites for entire duration of recording, if some time duration was missed it will not be assigned any label.
+4. Try to log activites for entire duration of recording, if some time duration was missed it will be assigned to "Uncertain" category.
 
 5. After the data collection, a report can be created of the log in csv format. ( Go to last section in the app denoted by three dots → reports → Create report (Choose the correct date) → Export option on top right → CSV
 
